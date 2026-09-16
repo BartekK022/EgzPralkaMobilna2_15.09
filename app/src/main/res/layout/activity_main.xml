@@ -53,15 +53,15 @@
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/editTextNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="number"
                 android:background="#87CEEB"
                 android:textColor="#000080"
                 android:textColorHint="#000080"
-                android:text="Podaj nr prania 1..12" />
+                android:hint="Podaj nr prania 1..12" />
 
             <Button
                 android:id="@+id/button"
