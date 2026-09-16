@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     Button btnZatwierdz;
     Button btnWlacz;
+    boolean wlaczonyOdkurzacz = false;
     EditText editTextPobranaLiczba;
     TextView textViewPranie;
     int jakiProgram;
@@ -46,7 +47,20 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        textViewOdkurzaczWlaczony.setText("Odkurzacz włączony");
+
+                        if(wlaczonyOdkurzacz == false) {
+                            wlaczonyOdkurzacz = true;
+                        } else if(wlaczonyOdkurzacz == true) {
+                            wlaczonyOdkurzacz = false;
+                        }
+
+                        if(wlaczonyOdkurzacz == false){
+                            textViewOdkurzaczWlaczony.setText("Odkurzacz wyłączony");
+                            btnWlacz.setText("Włącz");
+                        } else if(wlaczonyOdkurzacz == true){
+                            textViewOdkurzaczWlaczony.setText("Odkurzacz włączony");
+                            btnWlacz.setText("Wyłacz");
+                        }
                     }
                 }
         );
